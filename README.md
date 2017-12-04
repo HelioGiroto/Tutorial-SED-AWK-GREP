@@ -1,8 +1,7 @@
 # Tutorial-SED
 Alguns exemplos do uso do comando (Linguagem) SED...
 
-
-Mais exemplos sed 
+Mais exemplos SED 
 *****************
 
 Formato:
@@ -11,7 +10,6 @@ Formato:
 sed 'Ys///X' nome_arq
 	Y = número da linha (se omitido é = todas).
 	X = número da ocorrência em cada linha.
-
 
 
 --- Substitui apenas na primeira linha:
@@ -35,9 +33,7 @@ sed 'Ys///X' nome_arq
 
 	sed -r 's/(,)+/,/g' contactos.csv 
 
-  Resultado:
-  Colombe,,,,,,,,
-  Colombe,
+	Resultado: De: "Colombe,,,,,,,," para: "Colombe,"
 
 
 --- Substitui apenas entre as linhas 3 e 6:
@@ -59,7 +55,7 @@ sed 'Ys///X' nome_arq
 
 --- Imprime determinada linha:
 
-	sed -n '2p' contatos 	--- Linha 2
+	sed -n '2p' contatos 	--- Imprime linha 2 do arquivo contatos.
 
 --- Imprime a primeira linha:
 
@@ -79,12 +75,9 @@ sed 'Ys///X' nome_arq
 
 
 --- Imprime de tantas em tantas linhas:
-	seq 10 | 
-	sed -n '1~2p'	--- Linhas ímpares
-	seq 10 | 
-	sed -n '2~2p'	--- Linhas pares
-	seq 70 | 
-	sed -n '0~7p'	--- Somentes as múltiplas de 7
+	seq 10 | sed -n '1~2p'	--- Linhas ímpares
+	seq 10 | sed -n '2~2p'	--- Linhas pares
+	seq 70 | sed -n '0~7p'	--- Somentes as múltiplas de 7
 
 
 --- Imprime somente as linhas que contém um padräo:
@@ -106,6 +99,8 @@ sed 'Ys///X' nome_arq
 
 	sed -n '1,/Jose/p' contatos	--- Da 1a. linha até a palavra José
 
+	seq 10 | sed -n '/5/,+3p' 	--- Desde onde encontra "5" até MAIS 3 linhas (total 4 linhas).
+
 
 --- imprime tudo o que estiver ENTRE um padräo ATÉ outro:
 	seq 100 | sed -n '/33/,/44/p' 	--- inclui os dois padröes (33 e 44)
@@ -119,5 +114,6 @@ sed 'Ys///X' nome_arq
 
 
 ver tb:
-http://www.theunixschool.com/2012/12/sed -10-examples-to-print-lines-from-file.html
+"http://www.theunixschool.com/2012/12/sed -10-examples-to-print-lines-from-file.html"
+"http://www.thegeekstuff.com/2009/09/unix-sed-tutorial-printing-file-lines-using-address-and-patterns"
 
