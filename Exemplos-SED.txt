@@ -162,3 +162,5 @@ http://www.catonmat.net/blog/sed-one-liners-explained-part-two/
 https://jinetedeldragon.wordpress.com/2009/06/22/sed-en-una-linea-sed-one-liners-parte-i/
 http://www.thegeekstuff.com/category/sed/
 https://www.tutorialspoint.com/sed/sed_strings.htm
+
+a ver: https://www.tecmint.com/linux-sed-command-tips-tricks/
