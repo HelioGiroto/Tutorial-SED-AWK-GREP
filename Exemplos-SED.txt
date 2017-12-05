@@ -35,6 +35,21 @@ sed 'Ys///X' nome_arq
 --- Acrescenta texto na última linha:
 
 	seq 7 | sed '$s/$/\nHola/'
+	
+
+--- Acrescenta texto na primeira linha usando a flag i\ 
+
+	sed '1i\HOLA ' arquivo.txt
+	
+	
+--- Acrescenta texto na última linha usando a flag a\
+
+	sed '$a\HOLA ' arquivo.txt
+
+
+... Acrescenta uma linha no meio do arquivo (p.ex. na linha 8):
+
+	sed '8i\Esta é a linha 8, a partir de agora' lista.txt 		# A linha que antes era 8 passará a ser a 9.
 
 
 --- Retira varias vírgulas para apenas uma:
