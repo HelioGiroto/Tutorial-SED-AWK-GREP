@@ -49,7 +49,7 @@ sed 'Ys///X' nome_arq
 	sed  '3,6s/dia/noite/'
 
 
---- Substitui apenas nas linhas que contém a palavra "terceiro":
+--- Substitui apenas as linhas que contém certo padräo:
 
 	sed '/Pedro/s/solteiro/casado/' cadastro.csv
 
