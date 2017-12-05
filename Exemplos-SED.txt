@@ -128,7 +128,7 @@ sed 'Ys///X' nome_arq
 
 --- Usando variáveis no SED:
 
-	sed 's/'$var'/tarde/g' arquivo.txt
+	sed 's/'$var'/tarde/g' arquivo.txt	# Isso nada + eh que concatenaçao na linha de comando.
 	
 	sed 's/'"$var"'/tarde/g' arquivo.txt	# Caso haja problema por conter espaço na variavel.
 
