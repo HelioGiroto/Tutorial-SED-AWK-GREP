@@ -29,12 +29,12 @@ sed 'Ys///X' nome_arq
 
 --- Acrescenta texto na primeira linha:
 
-	sed '1s/^/ACRESCENTADO...\n/' arquivo.txt
+	seq 7 | sed '1s/^/Hola\n/'
 
 
 --- Acrescenta texto na última linha:
 
-	sed '$s/$/\nACRESCENTADO.../' arquivo.txt
+	seq 7 | sed '$s/$/\nHola/'
 
 
 --- Retira varias vírgulas para apenas uma:
@@ -51,12 +51,14 @@ sed 'Ys///X' nome_arq
 
 --- Substitui apenas nas linhas que contém a palavra "terceiro":
 
-	sed '/terceiro/s/dia/noite/g'
+	sed '/Pedro/s/solteiro/casado/' cadastro.csv
 
 
 --- NÄO substitui nas linhas onde aparece a palavra "terceiro":
 
 	sed '/terceiro/!s/dia/noite/g'
+
+
 
 
 --- Imprime determinada linha:
