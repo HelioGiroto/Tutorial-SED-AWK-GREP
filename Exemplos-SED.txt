@@ -27,6 +27,16 @@ sed 'Ys///X' nome_arq
 	sed 's/,/ /' contatos  #(tb o mesmo! Se omite o núm)
 
 
+--- Acrescenta texto na primeira linha:
+
+	sed '1s/^/ACRESCENTADO...\n/' arquivo.txt
+
+
+--- Acrescenta texto na última linha:
+
+	sed '$s/$/\nACRESCENTADO.../' arquivo.txt
+
+
 --- Retira varias vírgulas para apenas uma:
 
 	sed -r 's/(,)+/,/g' contactos.csv 
@@ -47,8 +57,6 @@ sed 'Ys///X' nome_arq
 --- NÄO substitui nas linhas onde aparece a palavra "terceiro":
 
 	sed '/terceiro/!s/dia/noite/g'
-
-
 
 
 --- Imprime determinada linha:
