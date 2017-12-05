@@ -145,6 +145,21 @@ sed 'Ys///X' nome_arq
 --- Apaga determinada linha:
 
 	sed '2d' contatos
+	
+	
+--- Apagar linhas em BRANCO:
+
+	sed '/^$/d' arquivo
+	
+	
+--- Acrescentar linhas em BRANCO num arquivo:
+
+	sed G arquivo 	
+	
+	sed 'G;G' arquivo	# Acrescenta 2 linhas em branco entre cada linha.
+	
+	seq 10 | sed G
+	
 
 --- Usando variáveis no SED:
 
