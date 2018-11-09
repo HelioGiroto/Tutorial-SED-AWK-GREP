@@ -25,6 +25,11 @@ sed 'Ys///X' nome_arq
 	sed 's/,/ /1' contatos 
 
 	sed 's/,/ /' contatos  #(tb o mesmo! Se omite o núm)
+	
+	
+--- Coloca pontos decimais num número:
+	echo 123456789 | rev | sed 's/.../&./g' | rev
+	echo 123456789 | rev | sed 's/.../&./g' | rev | sed 's/^\.//'   # Tira o 1o. ponto de: .123.456...
 
 
 --- Acrescenta texto na primeira linha:
