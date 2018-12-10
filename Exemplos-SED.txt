@@ -26,6 +26,13 @@ sed 'Ys///X' nome_arq
 
 	sed 's/,/ /' contatos  #(tb o mesmo! Se omite o núm)
 	
+
+--- Substitui os 4 primeiros caracteres (seja o que for) em cada linha:
+	
+	sed 's/.\{4\}//' texto.txt
+	
+	sed 's/-\{2\}//' datas.txt 	# Apaga os 2 primeiros traços (-) de cada linha.
+	
 	
 --- Coloca pontos decimais num número:
 	echo 123456789 | rev | sed 's/.../&./g' | rev
@@ -77,6 +84,11 @@ sed 'Ys///X' nome_arq
 --- Substitui apenas as linhas que contém certo padräo:
 
 	sed '/Pedro/s/solteiro/casado/' cadastro.csv
+
+
+--- Substitui usando OR (OU): Se encontrar isso OU aquilo:
+
+	sed 's/marcos\|eric\|camila/pinguim/g' 
 
 
 --- NÄO substitui nas linhas onde aparece a palavra "terceiro":
