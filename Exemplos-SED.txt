@@ -35,8 +35,10 @@ sed 'Ys///X' nome_arq
 	
 	
 --- Coloca pontos decimais num número:
-	echo 123456789 | rev | sed 's/.../&./g' | rev
+	echo 12345678 | rev | sed -E 's/.{3}/&./g' | rev
+	echo 123456789 | rev | sed 's/.../&./g' | rev			# + Simplificado que acima?
 	echo 123456789 | rev | sed 's/.../&./g' | rev | sed 's/^\.//'   # Tira o 1o. ponto de: .123.456...
+	echo 123456789 | rev | sed 's/.../&./g; s/\.$//' | rev		# Efeito igual.
 
 
 --- Acrescenta texto na primeira linha:
