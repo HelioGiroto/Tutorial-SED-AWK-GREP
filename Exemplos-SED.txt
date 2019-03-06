@@ -161,6 +161,9 @@ sed 'Ys///X' nome_arq
 	seq 100 | sed -n '/33/,/44/p' 	--- inclui os dois padröes (33 e 44)
 
 
+--- Parse de email num texto:
+	sed 's/ /\n/g' num_texto.txt | grep '@'
+
 --- Apaga determinada linha:
 
 	sed '2d' contatos
