@@ -41,10 +41,24 @@ sed 'Ys///X' nome_arq
 	echo 123456789 | rev | sed 's/.../&./g; s/\.$//' | rev		# Efeito igual.
 
 
+--- Converte string (frase) para minúscula:
+
+	sed 's/./\L&/g' <<< "Now is the Time"
+	
+--- Converte string (frase) para MAIÚSCULA:
+
+	sed 's/./\U&/g' <<< "Now is the Time"
+	
+--- Converte string (frase) para MAIÚSCULA apenas primeiras letras de cada palavra:
+	
+	sed -r 's/\w+/\u&/g' <<< "Now is the time"
+	
+	*(NAS CONVERSÕES ACIMA SE PODE OMITIR O COMANDO g PARA TESTAR!).
+
+
 --- Acrescenta texto na primeira linha:
 
 	seq 7 | sed '1s/^/Hola\n/'
-
 
 --- Acrescenta texto na última linha:
 
